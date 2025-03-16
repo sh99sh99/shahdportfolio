@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #4f4b4d;
+            margin: 0;
+            padding: 40px;
+        }
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .about-section img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .about-text {
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-section">
+        <img src="aboutme.jpeg" alt="About Me">
+        <div class="about-text">
+            <h1>About Me</h1>
+            <p>Welcome to my space! I'm passionate about design, creativity, and bringing ideas to life. With a strong background in graphic design, UI/UX, and branding, I aim to create impactful and meaningful experiences through my work.</p>
+            <p>Feel free to reach out if you'd like to collaborate or just have a chat!</p>
+        </div>
+    </div>
+</body>
+</html>
