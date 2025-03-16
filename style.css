@@ -1,0 +1,671 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Font face for LANTX-RegularItalic */
+@font-face {
+    font-family: 'شهد';
+    src: url('LANTX-RegularItalic.otf') format('opentype');  /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header Section */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #000000;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 a {
+    font-size: 48px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;  /* Darker blue */
+    transition: color 0.3s;
+    font-family: 'شهد', 'Arial', sans-serif;  /* Using LANTX font for شهد */
+}
+
+header h1 a:hover {
+    color: #4f4b4d;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1A3578;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4f4b4d;
+}
+
+/* Home Content */
+.home-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.home-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 18px;
+}
+
+/* Masonry Gallery */
+.gallery {
+    column-count: 3;
+    column-gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item {
+    margin-bottom: 15px;
+    break-inside: avoid;
+}
+
+.item img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+/* Specific styling for Image 4 */
+.item.image-4 {
+    grid-column: span 2; /* Make Image 4 span across two columns */
+    grid-row: span 2;    /* Make Image 4 span across two rows */
+}
+
+.item.image-4 img {
+    transform: scale(1.2); /* Adjust the scale as needed */
+}
+
+/* Contact Page */
+.contact-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #111;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.contact-page h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-page input,
+.contact-page textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #222;
+    color: #fff;
+}
+
+.contact-page button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.contact-page button:hover {
+    background-color: #4f4b4d;
+}
+
+/* About Page */
+.about-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #111;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.about-page h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 2;
+    color: #4f4b4d;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        column-count: 2;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        column-count: 1;
+    }
+}
+
+/* Project Details Page */
+.project-details {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    color: #4f4b4d;
+}
+
+.project-details h2 {
+    margin-bottom: 20px;
+}
+
+.project-details .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.project-details .gallery-item {
+    width: calc(33.333% - 10px);
+}
+
+.project-details .gallery img {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-details .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.project-details p {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+#lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+/* Updated CSS */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.scrolling-bio {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.scrolling-bio p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 15s linear infinite;
+    color:#4f4b4d;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+/* Scrolling Bio */
+.scrolling-bio {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: 5px; /* Space from the header */
+}
+
+.scrolling-bio p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 15s linear infinite;
+}
+
+/* Black Line */
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: black; /* Keeps the original line */
+    margin-bottom: 10px;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.scrolling-bio p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 30s linear infinite; /* Increased from 15s to 25s */
+}
+
+.contact {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #000000; /* Adjusted to match your existing theme */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #333; /* Adjusted to match your site's colors */
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Font face for LANTX-RegularItalic */
+@font-face {
+    font-family: 'شهد';
+    src: url('LANTX-RegularItalic.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header Section */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #000000;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 a {
+    font-size: 48px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s;
+    font-family: 'شهد', 'Arial', sans-serif;
+}
+
+header h1 a:hover {
+    color: #4f4b4d;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1A3578;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4f4b4d;
+}
+
+/* Home Content */
+.home-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.home-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 18px;
+}
+
+/* Masonry Gallery */
+.gallery {
+    column-count: 3;
+    column-gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item {
+    margin-bottom: 15px;
+    break-inside: avoid;
+}
+
+.item img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+/* Contact Page */
+.contact-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #111;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.contact-page h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-page input,
+.contact-page textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #222;
+    color: #fff;
+}
+
+.contact-page button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.contact-page button:hover {
+    background-color: #4f4b4d;
+}
+
+/* About Popup */
+#about-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+/* Show popup */
+#about-popup.show {
+    display: block;
+}
+
+/* Layout adjustments */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Image styling */
+.about-content img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Text styling */
+.about-text {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000000;
+}
+
+/* Add spacing between paragraphs */
+.about-text p {
+    margin-bottom: 8px;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        column-count: 2;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #about-popup {
+        width: 90%;
+        max-width: 350px;
+        padding: 10px;
+    }
+
+    .about-content img {
+        max-width: 120px;
+    }
+
+    .about-text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        column-count: 1;
+    }
+}
